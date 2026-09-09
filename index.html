@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Referee Scheduling Calendar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🏆 Official & Match Scheduling System</h1>
+    </header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Calendar</a>
+      <a href="#">Matches</a>
+    </nav>
+    <main>
+      <h2>📅 Assignment Calendar</h2>
+      <div class="calendar-header">
+        <button id="prev">◀ Prev</button>
+        <strong id="monthYear"></strong>
+        <button id="next">Next ▶</button>
+      </div>
+      <table class="calendar">
+        <thead>
+          <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+          </tr>
+        </thead>
+        <tbody id="calendarBody"></tbody>
+      </table>
+    </main>
+    <footer>© 2026 — Referee Scheduling System</footer>
+  </div>
+
+  <!-- Modal for matches -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h3 id="modalDate">Add Match</h3>
+      <input id="matchTeam" placeholder="e.g. Team A vs Team B">
+      <input id="matchTime" type="time">
+      <input id="matchRef" placeholder="Referee Name">
+      <button id="saveMatch">Save Match</button>
+      <button id="closeModal" style="background:#ccc;color:#333">Cancel</button>
+      <div id="matchList"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
